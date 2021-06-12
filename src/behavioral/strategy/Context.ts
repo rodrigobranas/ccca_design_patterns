@@ -1,13 +1,15 @@
-import Strategy from "./Strategy";
+import Entity from "./Entity";
+import Repository from "./Repository";
 
 export default class Context {
-    strategy: Strategy;
+    repository: Repository;
 
-    constructor (strategy: Strategy) {
-        this.strategy = strategy;
+    constructor (repository: Repository) {
+        this.repository = repository;
     }
 
     operation () {
-        this.strategy.algorithm();
+        const entity = new Entity();
+        this.repository.save(entity);
     }
 }

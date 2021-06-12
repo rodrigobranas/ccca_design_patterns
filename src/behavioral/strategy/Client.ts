@@ -1,11 +1,13 @@
+
 import Context from "./Context";
-import StrategyA from "./StrategyA";
-import StrategyB from "./StrategyB";
+import RepositoryDatabase from "./RepositoryDatabase";
+import RepositoryMemory from "./RepositoryMemory";
 
-const strategyA = new StrategyA();
-const context1 = new Context(strategyA);
-context1.operation();
+const repositoryMemory = new RepositoryMemory();
+const repositoryDatabase = new RepositoryDatabase();
 
-const strategyB = new StrategyB();
-const context2 = new Context(strategyB);
-context2.operation();
+const contextMemory = new Context(repositoryMemory);
+contextMemory.operation();
+
+const contextDatabase = new Context(repositoryMemory);
+contextDatabase.operation();
