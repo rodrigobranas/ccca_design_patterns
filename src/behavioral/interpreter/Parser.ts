@@ -31,7 +31,6 @@ export default class Parser {
     evaluate () {
         const context = new Context();
         for (const e of this.tree) {
-            console.log(e);
             e.interpret(context);
         }
         return context.pop();
