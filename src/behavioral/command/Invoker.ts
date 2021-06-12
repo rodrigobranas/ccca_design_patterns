@@ -1,7 +1,7 @@
 import Command from "./Command";
 
-export class Invoker {
-    private commands: Command[];
+export default class Invoker {
+    commands: Command[];
 
     constructor() {
         this.commands = [];

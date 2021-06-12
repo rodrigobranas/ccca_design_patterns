@@ -1,15 +1,15 @@
 import Iterator from "./Iterator";
 
-export class ConcreteIterator implements Iterator {
+export default class NumberIterator implements Iterator {
 
-    private collection: any[] = [];
+    private collection: number[] = [];
     private position: number = 0;
 
-    constructor(collection: any[]) {
+    constructor(collection: number[]) {
         this.collection = collection;
     }
 
-    public next(): any {
+    public next(): number {
         var result = this.collection[this.position];
         this.position += 1;
         return result;
