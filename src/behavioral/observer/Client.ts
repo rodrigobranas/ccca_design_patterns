@@ -1,8 +1,8 @@
-import ObserverA from "./ObserverA";
-import ObserverB from "./ObserverB";
-import Subject from "./Subject";
+import Expression from "./Expression";
+import Button from "./Button";
+import InputText from "./InputText";
 
-const subject = new Subject();
-subject.register(new ObserverA());
-subject.register(new ObserverB());
-subject.notifyAll();
+const inputText = new InputText();
+inputText.register(new Expression());
+inputText.register(new Button());
+inputText.notifyAll();

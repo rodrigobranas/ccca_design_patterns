@@ -1,6 +1,6 @@
 import Observer from "./Observer";
 
-export default class Subject {
+export default class InputText {
     observers: Observer[];
 
     constructor () {

@@ -6,7 +6,7 @@ export default class AuthenticationHandler extends Handler {
     }
     public handlerRequest(req: string) {
         console.log("Authentication:", req);
-        if (req === "2") return false;
+        if (req === "Request 2") return false;
         return true;
     }
 }
