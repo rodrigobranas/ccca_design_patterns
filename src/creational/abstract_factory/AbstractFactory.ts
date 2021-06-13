@@ -1,7 +1,7 @@
-import ProductA from "./ProductA";
-import ProductB from "./ProductB";
+import OrderRepository from "./OrderRepository";
+import ProductRepository from "./ProductRepository";
 
 export default interface AbstractFactory {
-    createProductA (): ProductA;
-    createProductB (): ProductB;
+    createOrderRepository() : OrderRepository;
+    createProductRepository(): ProductRepository;
 }
