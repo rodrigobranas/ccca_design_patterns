@@ -1,12 +1,16 @@
-import ConcreteColleagueA from "./ConcreteColleagueA";
-import ConcreteColleagueB from "./ConcreteColleagueB";
-import ConcreteMediator from "./ConcreteMediator";
 
-const cm = new ConcreteMediator();
-const c1 = new ConcreteColleagueA(cm);
-const c2 = new ConcreteColleagueB(cm);
-cm.addColleague(c1);
-cm.addColleague(c2);
+import Mediator from "./Mediator";
+import User from "./User";
 
-c1.send("`send` of ConcreteColleagueA is being called!");
-c2.send("`send` of ConcreteColleagueB is being called!");
+const mediator = new Mediator();
+const john = new User("John", mediator);
+const clara = new User("Clara", mediator);
+const ana = new User("Ana", mediator);
+
+mediator.addUser(john);
+mediator.addUser(clara);
+mediator.addUser(ana);
+
+john.send("Hello everyone!");
+clara.send("Hello John!");
+ana.send("Hi John!");
