@@ -4,19 +4,19 @@ import Repository from "./Repository";
 export default class RepositoryMemory implements Repository {
 
     save(entity: Entity): void {
-        console.log("save entity");
+        console.log("memory save entity");
     }
     get(id: Entity): void {
-        console.log("get entity");
+        console.log("memory get entity");
     }
     update(entity: Entity): void {
-        console.log("update entity");
+        console.log("memory update entity");
     }
     delete(id: Entity): void {
-        console.log("delete entity");
+        console.log("memory delete entity");
     }
     count(): number {
-        console.log("count entities");
+        console.log("memory count entities");
         return 10;
     }    
 }

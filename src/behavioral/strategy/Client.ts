@@ -9,5 +9,5 @@ const repositoryDatabase = new RepositoryDatabase();
 const contextMemory = new Context(repositoryMemory);
 contextMemory.operation();
 
-const contextDatabase = new Context(repositoryMemory);
+const contextDatabase = new Context(repositoryDatabase);
 contextDatabase.operation();
